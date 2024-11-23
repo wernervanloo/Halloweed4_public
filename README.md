@@ -1,6 +1,6 @@
 ## introduction
 
-This is the sourcecode for Halloweed 4, a C64 demo that competed in the [Transmission64](https://transmission64.com/) 2024 demo competition that was held on 23-11-2024.
+This is the sourcecode for Halloweed 4, a C64 demo that competed in the [Transmission64](https://transmission64.com/) 2024 demo competition that was held on 23-11-2024. Halloweed 4 can be downloaded from [CSDb](https://csdb.dk/release/?id=247767)
 
 Halloweed 4 was made by:
 - Werner van Loo (code)
