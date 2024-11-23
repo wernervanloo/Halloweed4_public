@@ -1,0 +1,27 @@
+Voor alle parts geldt:
+- Gebruikte pages goed aangeven.
+~ Eventueel dingen compacter maken.
+~ Globale counter maken.
+
+Spindle tips & tricks:
+- Het helpt bij het vinden van ruimte voor de driver wanneer een part opgebroken
+  is in chunks. En let op: Spindle gaat proberen de driver achter het 1e chunk te
+  zetten; allereerst in dezelfde page, maar mocht de driver daar niet in passen,
+  dan probeert hij het in de page daarna en als dat niet lukt, dan gaat Spindle vanaf
+  het begin van het geheugen zoeken, wat zijn eigen problemen met zich mee kan brengen.
+  - Als het even kan, laat dan de 1e chunk eindigen op bv. $xx7f zodat Spindle de 
+    driver echt nog daarachter in dezelfde page kan zetten. Dat scheelt een hele hoop
+    problemen!
+- Als een part een music player 'unload' dan mag hij nog steeds niet met die
+  music player overlappen in het geheugen. Een eventueel automatisch tussengevoegd
+  'blank effect' zal doorgaan met aanroepen van de music player totdat het nieuwe part
+  ingeladen is (mocht je denken dit te kunnen fixen in pefchain.patch_effects...).
+  - En let ook hierop: een 'blank effect' zal niet (snel?) worden geplaatst in de
+    page van een ander part. Maar, ik heb hem wel dat effect net achter het 1e chunk
+    van het opvolgende part zien zetten dat op $32ff eindigde. De driver van het 
+    blank effect kwam op $3326, en installeerde bij aanroep eerst een muziekafspeelroutine
+    voor de oude music player en deze plaatste hij op $3300. De driver van het opvolgende
+    part kwam echter (zoals verwacht) (ook) op $3300! Dus zodra het blank effect het
+    volgende part ging laden terwijl de muziekafspeelroutine nog liep werd $3300 
+    overschreven met een crash tot gevolg. Dat 1e chunk eerder laten eindigen zodat
+    zijn driver in de laatste page paste loste dat probleem op.

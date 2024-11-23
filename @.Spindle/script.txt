@@ -1,0 +1,31 @@
+# Halloweed4
+# ----------
+
+1a_bliksem.pef        02 = 01
+1b_logo.pef           02 = 02
+1c_copylogo.pef       -
+1d_freemem.pef        02 = 03
+
+1e_bitmapscroll.pef   a4 = 19
+|                     a4 = 32
+|                     ae = 01
+|                     02 = 04
+
+1f_fade.pef           02 = 05
+unload.pef            -
+# the sid is now unloaded
+
+borderfade.pef        02 = 06
+3dbars.pef            02 = 07
+closeborder1.pef      02 = 08
+rasterfade1.pef       02 = 09
+agsp.pef              02 = 0A
+dummy.pef             -
+oogbal.pef            02 = 0B
+distort.pef           02 = 0C
+blow.pef              02 = 0D
+glow.pef              02 = 0E
+redeye.pef            02 = 0F
+rasterfade2.pef       02 = 10
+unload2.pef           -
+ufli.pef              -

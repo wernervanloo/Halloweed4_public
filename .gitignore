@@ -1,0 +1,9 @@
+*.sym
+*.vs
+*.dbg
+*.prg
+*.pef
+*.efo
+.source.txt
+.DS_Store
+@.Spindle/environment.mk
