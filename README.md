@@ -6,7 +6,7 @@ Halloweed 4 was made by:
 - Werner van Loo (code)
 - Michel de Bree (music, makefile magic)
 - Nikaj Eijk (graphics)
-- John de Bruin (graphics, fadepattern and help)
+- John Bruin (graphics, fadepattern and help)
 - Daniel Kottmair (graphics last part and banners in the AGSP part)
 
 using LFT's excellent Spindle trackmo system.
